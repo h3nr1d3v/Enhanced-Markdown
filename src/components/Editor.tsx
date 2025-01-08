@@ -11,7 +11,7 @@ import { countWordsAndChars } from '../utils/counter';
 import { markdownShortcuts } from '../utils/shortcuts';
 import { documentTemplates } from '../utils/templates';
 
-const INITIAL_CONTENT = `# Welcome to the Enhanced Markdown Editor
+const INITIAL_CONTENT = `# 📝 Welcome to the Enhanced Markdown Editor
 
 Start typing your markdown here...`;
 
