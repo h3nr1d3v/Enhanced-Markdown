@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.theme-light-pastel .prose {
+  --tw-prose-body: theme('colors.gray.800');
+  --tw-prose-headings: theme('colors.gray.900');
+  --tw-prose-links: theme('colors.blue.600');
+  --tw-prose-code: theme('colors.pink.600');
+  --tw-prose-pre-code: theme('colors.pink.600');
+  --tw-prose-pre-bg: theme('colors.gray.50');
+}
+
+.prose-blog {
+  @apply max-w-2xl mx-auto;
+}
+
+.prose-wiki {
+  @apply max-w-4xl mx-auto;
+}
+
+.prose-portfolio {
+  @apply max-w-3xl mx-auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.editor-textarea {
+  @apply font-mono text-base leading-relaxed;
+  height: calc(100vh - 12rem);
+  overflow-y: auto;
+  resize: none;
+}
+
+.toolbar-button {
+  @apply p-2 rounded-lg transition-colors duration-200 hover:opacity-80 flex items-center gap-2;
+}
+
+.zen-mode .toolbar-button {
+  @apply opacity-0 transition-opacity duration-200;
+}
+
+.zen-mode:hover .toolbar-button {
+  @apply opacity-100;
+}
+
+.mobile-preview {
+  @apply w-full max-w-sm mx-auto;
+  height: 667px; /* iPhone SE height */
+  overflow-y: auto;
+  border-radius: 2rem;
+  box-shadow: 0 0 0 10px #333, 0 0 0 13px #666;
+}
+
+/* Portfolio specific styles */
+.prose-portfolio {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.prose-portfolio h1 {
+  @apply text-4xl font-bold mb-8 text-center;
+  background: linear-gradient(to right, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.prose-portfolio h2 {
+  @apply text-2xl font-semibold mb-4 text-blue-600;
+}
+
+.prose-portfolio p {
+  @apply text-gray-700 leading-relaxed mb-6;
+}
+
+.prose-portfolio code {
+  @apply bg-gray-100 text-blue-600 px-2 py-1 rounded;
+}
+
+.prose-portfolio pre {
+  @apply bg-gray-900 text-white p-4 rounded-lg my-6;
+}
+
